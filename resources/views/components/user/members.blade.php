@@ -1,5 +1,5 @@
 <x-user.common.section class="bg-light py-14">
-  <x-user.common.section-title/>
+  <x-user.common.section-title title="OUR TEAM" content="Our Team Members"/>
       <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           <div class="text-center text-gray-500 dark:text-gray-400">
               <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sofia-mcguire.png" alt="Sofia Avatar">

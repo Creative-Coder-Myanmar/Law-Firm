@@ -8,6 +8,14 @@
   <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
   <title>Law Firm</title>
 
+   <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Fontawesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Tailwind Css -->
@@ -27,9 +35,12 @@
 <body class="relative">
     <x-user.navbar/>
     {{$slot}}
+    <x-user.common.top-arrow/>
     <x-user.footer/>
 </body>
+
 <!-- AOS animation Js -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 <script src="/js/custom.js"></script>
 </html>

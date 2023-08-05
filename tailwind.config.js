@@ -19,6 +19,7 @@ export default {
                 'secondary' : '#5b21b6',
                 'warning' : '#ca8a04',
                 'light': '#f1f5f9',
+                'dark': '#1e293b',
             }
         },
     },

@@ -1,17 +1,16 @@
-<section class="py-10 px-8 lg:px-24 bg-primary">
-  {{-- <x-user.common.section-title/> --}}
+<section class="py-10 px-8 lg:px-24 bg-light">
+    <x-user.common.section-title title="CONTACT US" content="Contact For Any Query"/>
+
   <div class="flex flex-col md:flex-row mt-8 space-x-0 md:space-x-5 space-y-5 md:space-y-0">
-      <div class="m-auto shadow-md bg-footerbg dark:bg-dcard dark:shadow-none rounded-lg p-8 md:pt-10 h-auto md:h-[550px] w-full md:w-2/5">
-        <ContactTitle
-          title="Contact Information"
-          title-class="justify-start items-start text-white"
-        />
-        <div class="space-y-5 text-white">
+      <div class="m-auto shadow-md rounded-lg p-8 md:pt-10 h-auto md:h-[550px] w-full md:w-2/5">
+        {{-- <x-user.common.contact-title/> --}}
+
+        <div class="space-y-5 text-dark">
           <a
             href="tel:+95942377834"
             class="flex items-center justify-start space-x-3 hover:text-blue-400"
           >
-            <i class="fa-solid fa-phone text-light"></i>
+            <i class="fa-solid fa-phone text-dark"></i>
             <p>099-42-377-834</p>
           </a>
 
@@ -19,7 +18,7 @@
             href="mailto:hlaingminthan92@gmail.com"
             class="flex items-start md:items-center justify-start space-x-3 hover:text-blue-400"
           >
-            <i class="fa-solid fa-envelope text-light"></i>
+            <i class="fa-solid fa-envelope text-dark"></i>
             <p class="line-clamp-2 md:line-clamp-1">hlaingminthan92@gmail.com</p>
           </a>
 
@@ -28,7 +27,7 @@
             target="_blank"
             class="flex items-start justify-start space-x-3 hover:text-blue-400"
           >
-            <i class="fa-solid fa-location-dot text-light"></i>
+            <i class="fa-solid fa-location-dot text-dark"></i>
             <div class="flex flex-col">
               <p>No.75, 3rd Floor, 54th Street Botahtaung</p>
               <p>( ကုန်သည်လမ်းဘက် ဂန္ဒီဆေးရုံဘေးလမ်း )</p>
@@ -39,23 +38,22 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7640.513133450913!2d96.1754061009709!3d16.763906201203035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1edec359b616f%3A0xa24ad81f72e7df02!2z4YCe4YCZ4YCt4YCv4YCE4YC64YC4IOGAmeGArOGAnOGArOGAnOGAmeGAuuGAuA!5e0!3m2!1smy!2smm!4v1691212269999!5m2!1smy!2smm" class="rounded-md w-full h-[250px]" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
-          <div class="flex items-center justify-start space-x-2 ">
-            <i class="fa-brands fa-facebook text-lg text-blue-600"></i>
-            <i class="fa-brands fa-youtube text-lg text-red-500"></i>
-            <i class="fa-brands fa-twitter text-lg text-blue-500"></i>
+          <div class="flex items-center justify-start space-x-3">
+            <i class="fa-brands fa-facebook text-blue-600 text-2xl"></i>
+            <i class="fa-brands fa-youtube text-red-500 text-2xl"></i>
+            <i class="fa-brands fa-twitter text-blue-600 text-2xl"></i>
           </div>
         </div>
       </div>
 
       <!-- Form -->
       <div class="m-auto shadow-md dark:bg-dcard dark:shadow-none rounded-lg p-4 py-10 md:p-8 md:pt-10 h-auto md:h-[550px] w-full md:w-3/5">
-        <ContactTitle />
+       <x-user.common.contact-title/>
         <form class="space-y-5">
-          <input type="email" class="shadow-sm bg-secondary border-gray-300 text-gray-900 text-sm rounded-md focus:ring-primary focus:border-primary outline-0 border-0 block w-full p-2.5" placeholder="name@flowbite.com">
-          <input type="email" class="shadow-sm bg-secondary border-gray-300 text-gray-900 text-sm rounded-md focus:ring-primary focus:border-primary outline-0 border-0 block w-full p-2.5" placeholder="name@flowbite.com">
-          <input type="email" class="shadow-sm bg-secondary border-gray-300 text-gray-900 text-sm rounded-md focus:ring-primary focus:border-primary outline-0 border-0 block w-full p-2.5" placeholder="name@flowbite.com">
-          <textarea name="" id="" cols="30" rows="10" class="shadow-sm bg-secondary border-gray-300 text-gray-900 text-sm rounded-md focus:ring-primary focus:border-primary outline-0 border-0 block w-full p-2.5" placeholder="name@flowbite.com"></textarea>
-          <button class="shadow-sm bg-secondary text-light text-sm rounded-md block w-full py-3">Send Message</button>
+            <x-user.common.input type="text" name="name" placeholder="Enter your name"/>
+            <x-user.common.input type="email" name="email" placeholder="Enter your email"/>
+            <textarea name="" cols="30" rows="10" class="shadow-sm bg-light text-gray-900 text-sm rounded-md focus:ring-primary focus:border-primary outline-0 border-1 block w-full p-2.5" placeholder="name@flowbite.com"></textarea>
+          <button class="shadow-sm bg-primary text-light text-sm rounded-md block w-full py-3">Send Message</button>
         </form>
       </div>
     <!-- End -->

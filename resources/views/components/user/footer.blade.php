@@ -1,4 +1,4 @@
-<x-user.common.section class="bg-secondary py-5">
+<x-user.common.section class="bg-primary py-5">
     <div class="w-full mx-auto flex flex-col md:flex-row items-center justify-between">
         <span class="text-sm text-slate-400 sm:text-center">© 2023 <a href="#" class="hover:underline">LAWFIRM™</a>. All Rights Reserved.
         </span>
