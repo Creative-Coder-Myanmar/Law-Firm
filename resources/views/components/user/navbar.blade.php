@@ -1,4 +1,4 @@
-<nav class="bg-primary shadow-md px-3 py-8 md:px-1 lg:px-4 z-10 animate__animated duration-200"
+<nav class="bg-primary shadow-md px-3 py-7 md:px-1 lg:px-4 z-10 animate__animated duration-200"
     id="nav">
     <div class="container flex flex-row justify-between items-center mx-auto">
 
@@ -26,9 +26,9 @@
         </li>
       </ul>
 
-      <div class="flex justify-center items-center space-x-3">
-        <!-- Menuicon -->
-        <i class="fa-solid fa-bars text-slate-200 dark:text-slate-800 text-2xl flex md:hidden" onclick="openMenu()"></i>
+      <!-- Menuicon -->
+      <div class="flex justify-center items-center md:hidden">
+        <i class="fa-solid fa-bars text-slate-200 dark:text-slate-800 text-2xl" onclick="openMenu()"></i>
       </div>
 
     </div>
