@@ -15,6 +15,14 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/admin', function () {
+    return view('admin.index');
+});
+
+Route::get('/admin/news/create', function () {
+    return view('admin.news.create');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
