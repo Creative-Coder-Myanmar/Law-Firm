@@ -6,15 +6,37 @@
             <x-admin.common.aside-item route="{{ route('news.create') }}">
                 <i class="fa-solid fa-gauge w-5 text-gray-800"></i>
             </x-admin.common.aside-item>
-            <x-admin.common.aside-dropdown />
-            <x-admin.common.aside-item route="{{ route('news.create') }}" content="Logout">
-                <i class="fa-solid fa-right-from-bracket w-5 text-gray-700"></i>
-            </x-admin.common.aside-item>
 
-            {{-- <form method="post" action="{{ route('logout') }}">
+            <x-admin.common.aside-dropdown id="news" title="News Management" :dropdownItems="[
+                [
+                    'route' => route('news.create'),
+                    'name' => 'Create News',
+                ],
+                [
+                    'route' => route('news.index'),
+                    'name' => 'News List',
+                ],
+            ]" />
+
+            <x-admin.common.aside-dropdown id="people" title="People Management" :dropdownItems="[
+                [
+                    'route' => route('news.create'),
+                    'name' => 'Add Pepole',
+                ],
+                [
+                    'route' => route('news.index'),
+                    'name' => 'People List',
+                ],
+            ]" />
+
+            <form method="post" action="{{ route('logout') }}">
                 @csrf
-                <button>Hello</button>
-            </form> --}}
+                <button type="submit" class="w-full">
+                    <x-admin.common.aside-item content="Logout">
+                        <i class="fa-solid fa-right-from-bracket w-5 text-gray-700"></i>
+                    </x-admin.common.aside-item>
+                </button>
+            </form>
         </ul>
     </div>
 </aside>

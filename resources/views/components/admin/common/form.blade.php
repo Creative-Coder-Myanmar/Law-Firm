@@ -18,14 +18,14 @@
                 <div class="flex flex-col">
                     <label class="mb-2 font-bold text-lg text-gray-900">Title</label>
                     <input class="border py-2 px-3 text-grey-800" type="text" name="title"
-                        value="{{ $type === 'create' ? '' : $data->title }}">
+                        value="{{ old('title'), $type === 'create' ? '' : $data->title }}">
                     <x-admin.common.error error="title" />
                 </div>
 
                 <div class="flex flex-col">
                     <label class="mb-2 font-bold text-lg text-gray-900">Content</label>
                     <textarea name="description" class="editor">
-                        {!! $type === 'create' ? '' : $data->description !!}
+                        {!! old('description'), $type === 'create' ? '' : $data->description !!}
                     </textarea>
                     <x-admin.common.error error="description" />
                 </div>

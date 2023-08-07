@@ -1,4 +1,4 @@
-@props(['route', 'content' => 'Dashboard'])
+@props(['route' => null, 'content' => 'Dashboard'])
 
 <li>
     <a href="{{ $route }}"

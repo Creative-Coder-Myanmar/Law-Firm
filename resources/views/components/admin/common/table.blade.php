@@ -14,12 +14,12 @@
         @foreach ($news as $new)
             <tr class="bg-white border-b hover:bg-gray-50">
                 {{-- <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Jese image">
-                <div class="pl-3">
-                    <div class="text-base font-semibold">Neil Sims</div>
-                    <div class="font-normal text-gray-500">neil.sims@flowbite.com</div>
-                </div>
-            </th> --}}
+                    <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Jese image">
+                    <div class="pl-3">
+                        <div class="text-base font-semibold">Neil Sims</div>
+                        <div class="font-normal text-gray-500">neil.sims@flowbite.com</div>
+                    </div>
+                </th> --}}
                 <td class="py-4">
                     <img class="w-32 rounded-md"
                         src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg">

@@ -17,7 +17,7 @@ Route::get('/contact', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('admin.news.index');
+    return redirect()->route('news.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 // Admin
