@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\News;
 use Illuminate\Http\Request;
+use App\Http\Requests\NewsRequest;
 use App\Http\Controllers\Controller;
 
 class NewsController extends Controller
@@ -14,21 +15,17 @@ class NewsController extends Controller
     }
 
     //create page
-    function store(Request $request){
-        // if($request->hasFile('image')) {
-        //     $file = $request->file("image");
-        //     $fileName = $file->getClientOriginalName();
-        //     News::create([
-        //         'image' => $fileName,
-        //         'title' => 'hello',
-        //         'description'=> 'desc',
-        //     ]);
-        // }
+    function store(NewsRequest $request){
+        if($request->hasFile('image')) {
+            $file = $request->file("image");
+            $fileName = $file->getClientOriginalName();
+        }
         News::create([
-                // 'image' => $fileName,
-                'title' => 'hello',
-                'description'=> 'desc',
-            ]);
+            // 'image' => $fileName,
+            'title' => $request->title,
+            'slug' => str_replace(' ', '-', strtolower($request->title)),
+            'description'=> $request->description,
+        ]);
         return redirect()->route('news.index');
     }
 
@@ -39,8 +36,13 @@ class NewsController extends Controller
     }
 
     // destroy
-    function destroy(News $slug){
-        $slug->delete();
+    function destroy(News $new){
+        $new->delete();
         return back();
+    }
+
+    //edit page
+    function edit(News $new){
+        return view('admin.news.edit',compact('new'));
     }
 }

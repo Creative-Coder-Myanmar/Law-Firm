@@ -33,14 +33,23 @@
                 <td class="py-4">
                     {{ $new->created_at->diffForHumans() }}
                 </td>
-                <td class="py-4 cursor-pointer">
-                    <i class="fa-solid fa-pen-to-square text-lg text-secondary"></i>
-                    <a href="{{ route('news.destroy', $new->id) }}" class="fa-solid fa-trash text-lg text-red-600"></a>
+                <td class="py-4">
+                    <div class="cursor-pointer flex space-x-5 text-xl">
+                        <div>
+                            <a href="{{ route('news.edit', $new->id) }}"
+                                class="fa-solid fa-pen-to-square text-secondary"></a>
+                        </div>
+                        <div>
+                            <a href="{{ route('news.destroy', $new->id) }}" class="fa-solid fa-trash text-red-600"></a>
+
+                        </div>
+                    </div>
                 </td>
             </tr>
         @endforeach
-        <div>
-            {{ $news->links() }}
-        </div>
     </tbody>
 </table>
+
+<div class="mt-3">
+    {{ $news->links() }}
+</div>

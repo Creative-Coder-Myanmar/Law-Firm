@@ -4,7 +4,7 @@
     <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
         rel="stylesheet" />
 
-    <x-admin.common.form type="create" />
+    <x-admin.common.form type="edit" :data="$new" />
 
     <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
     <script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
