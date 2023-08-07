@@ -20,6 +20,8 @@ export default {
                 'warning' : '#ca8a04',
                 'light': '#f1f5f9',
                 'dark': '#1e293b',
+                'danger' : '#dc2626',
+                'smoke' : '#4b5563',
             }
         },
     },
