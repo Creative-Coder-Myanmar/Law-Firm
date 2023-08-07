@@ -2,16 +2,24 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Traits\MediaCaster;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class News extends Model
 {
-    use HasFactory;
+    use HasFactory, MediaCaster;
+
     protected $fillable = [
         'image',
         'title',
         'slug',
         'description',
     ];
+
+    protected function image(): Attribute
+    {
+        return $this->cast();
+    }
 }

@@ -10,20 +10,20 @@
     <script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
 
     <script>
-        const inputElement = document.querySelector('input[type="file"]');
+        const inputElement = document.querySelector('input[id="image"]');
 
         FilePond.registerPlugin(
             FilePondPluginImagePreview,
         );
 
-        const pond = FilePond.create(inputElement, {
-            server: {
-                url: '/news/store',
-                headers: {
-                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                }
-            }
-        });
+        // const pond = FilePond.create(inputElement, {
+        //     server: {
+        //         url: '/news/store',
+        //         headers: {
+        //             'X-CSRF-TOKEN': '{{ csrf_token() }}'
+        //         }
+        //     }
+        // });
         pond.labelIdle = `Drag & Drop your picture or <span class="filepond--label-action">Browse</span>`;
         // pond.stylePanelLayout = 'compact circle';
         // styleLoadIndicatorPosition: 'center bottom',

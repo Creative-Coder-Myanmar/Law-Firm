@@ -3,23 +3,29 @@
 namespace App\Http\Controllers;
 
 use App\Models\News;
+use App\helpers\Uploader;
 use Illuminate\Http\Request;
 use App\Http\Requests\NewsRequest;
 use App\Http\Controllers\Controller;
 
 class NewsController extends Controller
 {
+    public function __construct(private Uploader $uploader)
+    {
+        // code ...
+    }
+
     function create(){
         return view('admin.news.create');
     }
 
     function store(NewsRequest $request){
-        if($request->hasFile('image')) {
-            $file = $request->file("image");
-            $fileName = $file->getClientOriginalName();
+        $imageName = null;
+        if ($file = request('image')) {
+            $imageName = $this->uploader->upload($file, 'news');
         }
         News::create([
-            // 'image' => $fileName,
+            'image' => $imageName,
             'title' => $request->title,
             'slug' => str_replace(' ', '-', strtolower($request->title)),
             'description'=> $request->description,
@@ -45,14 +51,13 @@ class NewsController extends Controller
         return view('admin.news.edit',compact('new'));
     }
 
-    function update(Request $request){
-        dd($request->all());
-        // $new->update([
-        //     // 'image' => $fileName,
-        //     'title' => $request->title,
-        //     'slug' => str_replace(' ', '-', strtolower($request->title)),
-        //     'description'=> $request->description,
-        // ]);
+    function update(News $new, NewsRequest $request){
+        $new->update([
+            // 'image' => $fileName,
+            'title' => $request->title,
+            'slug' => str_replace(' ', '-', strtolower($request->title)),
+            'description'=> $request->description,
+        ]);
         return back();
     }
 }

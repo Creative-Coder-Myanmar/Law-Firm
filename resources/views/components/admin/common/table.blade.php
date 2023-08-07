@@ -14,8 +14,7 @@
         @forelse ($news as $new)
             <tr class="bg-white border-b hover:bg-gray-50">
                 <td class="py-4">
-                    <img class="w-32 rounded-md"
-                        src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg">
+                    <img class="w-32 h-20 object-cover rounded-md" src="{{ $new->image }}">
                 </td>
                 <td class="py-4">
                     {{ $new->title }}

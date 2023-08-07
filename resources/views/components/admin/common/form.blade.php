@@ -13,7 +13,7 @@
                 @csrf
                 <div class="flex flex-col">
                     <label class="mb-2 font-bold text-lg text-smoke">Image</label>
-                    <input type="file" name="image">
+                    <input type="file" id="image" name="image">
                 </div>
 
                 <div class="flex flex-col">
@@ -26,7 +26,7 @@
                 <div class="flex flex-col">
                     <label class="mb-2 font-bold text-lg text-gray-900">Content</label>
                     <textarea name="description" class="editor">
-                        {!! old('description'), $type === 'create' ? '' : $data->description !!}
+                        {!! $type === 'create' ? '' : $data->description !!}
                     </textarea>
                     <x-admin.common.error error="description" />
                 </div>
