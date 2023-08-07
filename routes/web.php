@@ -32,7 +32,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/news/index', 'index')->name('news.index');
         Route::get('/news/destroy/{new}', 'destroy')->name('news.destroy');
         Route::get('/news/edit/{new}', 'edit')->name('news.edit');
-        Route::post('/news/update', 'update')->name('news.update');
+        Route::post('/news/update/{new}', 'update')->name('news.update');
     });
 });
 

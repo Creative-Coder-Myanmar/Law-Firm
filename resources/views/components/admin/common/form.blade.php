@@ -7,8 +7,9 @@
                 {{ $type === 'create' ? 'Create News' : 'Edit News' }}
             </h1>
 
-            <form class="space-y-4" action="{{ $type === 'create' ? route('news.store') : route('news.update') }}"
-                method="post" enctype="multipart/form-data">
+            <form class="space-y-4"
+                action="{{ $type === 'create' ? route('news.store') : route('news.update', $data->id) }}" method="post"
+                enctype="multipart/form-data">
                 @csrf
                 <div class="flex flex-col">
                     <label class="mb-2 font-bold text-lg text-smoke">Image</label>
@@ -18,7 +19,7 @@
                 <div class="flex flex-col">
                     <label class="mb-2 font-bold text-lg text-gray-900">Title</label>
                     <input class="border py-2 px-3 text-grey-800" type="text" name="title"
-                        value="{{ old('title'), $type === 'create' ? '' : $data->title }}">
+                        value="{{ $type === 'create' ? '' : $data->title }}">
                     <x-admin.common.error error="title" />
                 </div>
 

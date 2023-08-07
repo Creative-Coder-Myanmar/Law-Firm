@@ -2,7 +2,11 @@
 
 <button type="{{ $type }}"
     {{ $attributes->merge(['class' => 'items-center py-2.5 px-3 text-sm font-medium text-white bg-secondary rounded-lg']) }}>
-    <a href="{{ $type === 'submit' ? '' : $route }}">
+    @if ($type === 'submit')
         {{ $content }}
-    </a>
+    @else
+        <a href="{{ $route }}">
+            {{ $content }}
+        </a>
+    @endif
 </button>

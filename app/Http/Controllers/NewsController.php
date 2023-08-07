@@ -9,12 +9,10 @@ use App\Http\Controllers\Controller;
 
 class NewsController extends Controller
 {
-    //create page
     function create(){
         return view('admin.news.create');
     }
 
-    //create page
     function store(NewsRequest $request){
         if($request->hasFile('image')) {
             $file = $request->file("image");
@@ -30,19 +28,31 @@ class NewsController extends Controller
     }
 
     function index(){
-        $news = News::orderBy('id','desc')->paginate(4);
-        $news->appends(request()->query());
+        $query = News::latest();
+        $query->when(request('search'),function($query,$search){
+            $query->where('title','like','%' .$search. '%');
+        });
+        $news = $query->paginate(4)->withQueryString();
         return view('admin.news.index',compact('news'));
     }
 
-    // destroy
     function destroy(News $new){
         $new->delete();
         return back();
     }
 
-    //edit page
     function edit(News $new){
         return view('admin.news.edit',compact('new'));
+    }
+
+    function update(Request $request){
+        dd($request->all());
+        // $new->update([
+        //     // 'image' => $fileName,
+        //     'title' => $request->title,
+        //     'slug' => str_replace(' ', '-', strtolower($request->title)),
+        //     'description'=> $request->description,
+        // ]);
+        return back();
     }
 }
