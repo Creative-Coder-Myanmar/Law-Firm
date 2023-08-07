@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\MemberController;
 use App\Http\Controllers\ProfileController;
 
 Route::get('/', function () {
@@ -17,7 +18,7 @@ Route::get('/contact', function () {
 });
 
 Route::get('/dashboard', function () {
-    return redirect()->route('news.index');
+    return view('admin.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 // Admin
@@ -33,6 +34,15 @@ Route::middleware('auth')->group(function () {
         Route::get('/news/destroy/{new}', 'destroy')->name('news.destroy');
         Route::get('/news/edit/{new}', 'edit')->name('news.edit');
         Route::post('/news/update/{new}', 'update')->name('news.update');
+    });
+
+    Route::controller(MemberController::class)->group(function () {
+        Route::get('/members/create', 'create')->name('members.create');
+        Route::post('/members/store', 'store')->name('members.store');
+        Route::get('/members/index', 'index')->name('members.index');
+        Route::get('/members/destroy/{new}', 'destroy')->name('members.destroy');
+        Route::get('/members/edit/{new}', 'edit')->name('members.edit');
+        Route::post('/members/update/{new}', 'update')->name('members.update');
     });
 });
 
