@@ -12,15 +12,15 @@
         <x-admin.common.form-input title="Profile" name="profile" type="file" />
 
         <x-admin.common.form-input title="Name" name="name" type="text"
-            value="{{ $type === 'create' ? '' : $data->name }}" />
+            value="{{ $type === 'create' ? old('name') : $data->name }}" />
 
         <x-admin.common.form-input title="Position" name="position" type="text"
-            value="{{ $type === 'create' ? '' : $data->position }}" />
+            value="{{ $type === 'create' ? old('position') : $data->position }}" />
 
         <div class="flex flex-col">
             <label class="mb-2 font-bold text-lg text-gray-900">About</label>
             <textarea name="about" class="editor">
-                        {!! $type === 'create' ? '' : $data->about !!}
+                        {!! $type === 'create' ? old('about') : $data->about !!}
                     </textarea>
             <x-admin.common.error error="about" />
         </div>

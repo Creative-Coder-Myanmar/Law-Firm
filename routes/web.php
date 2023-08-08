@@ -33,9 +33,9 @@ Route::middleware('auth')->group(function () {
         Route::get('/members/create', 'create')->name('members.create');
         Route::post('/members/store', 'store')->name('members.store');
         Route::get('/members/index', 'index')->name('members.index');
-        Route::get('/members/destroy/{new}', 'destroy')->name('members.destroy');
-        Route::get('/members/edit/{new}', 'edit')->name('members.edit');
-        Route::post('/members/update/{new}', 'update')->name('members.update');
+        Route::get('/members/destroy/{member}', 'destroy')->name('members.destroy');
+        Route::get('/members/edit/{member}', 'edit')->name('members.edit');
+        Route::post('/members/update/{member}', 'update')->name('members.update');
     });
 });
 

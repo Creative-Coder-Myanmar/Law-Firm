@@ -16,7 +16,12 @@ class MemberController extends Controller
     }
 
     function index(){
-        return view('admin.members.index');
+        $query = Member::latest();
+        $query->when(request('search'),function($query,$search){
+            $query->where('name','like','%' .$search. '%');
+        });
+        $members = $query->paginate(4)->withQueryString();
+        return view('admin.members.index',compact('members'));
     }
 
     function create(){
@@ -34,7 +39,31 @@ class MemberController extends Controller
             'position' => $request->position,
             'about'=> $request->about,
         ]);
+        return redirect()->route('members.index');
+    }
+
+    function destroy(Member $member){
+        $member->delete();
         return back();
-        // return redirect()->route('members.index');
+    }
+
+    function edit(Member $member){
+        return view('admin.members.edit',compact('member'));
+    }
+
+    function update(Member $member, MemberRequest $request){
+        $imageName = null;
+        if ($file = request('profile')) {
+            $imageName = $this->uploader->upload($file, 'profile');
+        }else{
+            $imageName = $member->image;
+        }
+        $member->update([
+            'profile' => $imageName,
+            'name' => $request->name,
+            'position' => $request->position,
+            'about'=> $request->about,
+        ]);
+        return redirect()->route('members.index');
     }
 }

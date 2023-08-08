@@ -25,7 +25,7 @@ class MemberRequest extends FormRequest
             'profile'=> 'required|mimes:png,jpg,jpeg,wepb',
             'name' => 'required|max:70',
             'position' => 'required|max:70',
-            'about' => 'max:10'
+            'about' => 'min:5'
         ];
     }
 }
