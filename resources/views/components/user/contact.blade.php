@@ -52,7 +52,7 @@
                 <x-user.common.input type="number" name="phone" placeholder="Enter your phone" />
                 <textarea name="message" cols="30" rows="7"
                     class="shadow-sm bg-light text-gray-900 text-sm rounded-md focus:ring-primary focus:border-primary outline-0 border-1 block w-full p-2.5"
-                    placeholder="name@flowbite.com"></textarea>
+                    placeholder="Write a message"></textarea>
                 <button class="shadow-sm bg-primary text-light text-sm rounded-md block w-full py-3">Send
                     Message</button>
             </form>

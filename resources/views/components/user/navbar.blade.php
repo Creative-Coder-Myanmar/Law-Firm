@@ -6,10 +6,10 @@
             <a href="/" class="text-3xl font-bold text-slate-200">Law Firm</a>
         </div>
 
-        <ul class="flex flex-col md:flex-row space-x-0 md:space-x-6 space-y-6 md:space-y-0 text-lg text-slate-200 dark:text-slate-800 cursor-pointer / bg-primary fixed md:static top-0 -right-full md:right-0 w-full md:w-auto h-screen md:h-auto z-10 justify-center items-center duration-200 pe-48 md:pe-0"
+        <ul class="flex flex-col md:flex-row space-x-0 md:space-x-6 space-y-6 md:space-y-0 text-lg text-slate-200 dark:text-slate-800 cursor-pointer / bg-primary fixed md:static top-0 -right-full md:right-0 w-full md:w-auto h-screen md:h-auto z-10 justify-center items-center duration-200 "
             id="menuItem">
 
-            <i class="absolute top-5 left-5 fa-solid fa-xmark flex md:hidden" onclick="closeMenu()"></i>
+            <i class="absolute top-5 right-5 fa fa-xmark text-3xl flex md:hidden" onclick="closeMenu()"></i>
 
             <li onclick="closeMenu()">
                 <a href="#top">Home</a>
