@@ -11,13 +11,13 @@
         <x-admin.common.form-input title="Image" name="image" type="file" />
 
         <x-admin.common.form-input title="Title" name="title" type="text"
-            value="{{ $type === 'create' ? '' : $data->title }}" />
+            value="{{ $type === 'create' ? old('title') : $data->title }}" />
 
         <div class="flex flex-col">
             <label class="mb-2 font-bold text-lg text-gray-900">Content</label>
             <textarea name="description" class="editor">
-                        {!! $type === 'create' ? '' : $data->description !!}
-                    </textarea>
+                {!! $type === 'create' ? old('description') : $data->description !!}
+            </textarea>
             <x-admin.common.error error="description" />
         </div>
 
