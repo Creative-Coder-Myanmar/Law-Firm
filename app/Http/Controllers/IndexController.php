@@ -19,4 +19,8 @@ class IndexController extends Controller
         $members = Member::latest()->paginate(20);
         return view('members',compact('members'));
     }
+
+    function about(){
+        return view('about');
+    }
 }

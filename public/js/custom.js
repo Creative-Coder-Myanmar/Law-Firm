@@ -31,7 +31,7 @@ if (scrollTop > lastScrollTop && scrollTop > 400) {
     "animate__fadeInDown"
     );
     topArrow.classList.remove("hidden");
-} else if (scrollTop < lastScrollTop && scrollTop < 400) {
+} else if (scrollTop < lastScrollTop && scrollTop < 300) {
     navbar.classList.remove(
     "fixed",
     "w-full",

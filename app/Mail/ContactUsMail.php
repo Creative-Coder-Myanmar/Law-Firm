@@ -13,7 +13,7 @@ class ContactUsMail extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
-    public function __construct(public $name, public $email, public $phone,public $message)
+    public function __construct(public $name, public $email, public $phone, public $userMessage)
     {
         //
     }
@@ -22,7 +22,7 @@ class ContactUsMail extends Mailable implements ShouldQueue
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Contact Us Mail....',
+            subject: 'Contact Us Mail',
         );
     }
 

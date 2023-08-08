@@ -3038,3 +3038,9 @@ select {
     text-align: start;
   }
 }
+
+@media (min-width: 1280px) {
+  .xl\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

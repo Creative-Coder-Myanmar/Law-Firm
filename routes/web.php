@@ -41,6 +41,7 @@ Route::middleware('auth')->group(function () {
 Route::controller(IndexController::class)->group(function () {
     Route::get('/', 'index')->name('index');
     Route::get('/members', 'members')->name('user.members.index');
+    Route::get('/about', 'about')->name('about.index');
 });
 
 Route::controller(BlogController::class)->group(function () {
@@ -50,7 +51,6 @@ Route::controller(BlogController::class)->group(function () {
 
 Route::controller(ContactController::class)->group(function () {
     Route::get('/contact', 'index')->name('contact.index');
-    Route::get('/send-contact-us-mail', 'send')->name('send.email');
+    Route::post('/send-contact-us-mail', 'send')->name('send.email');
 });
-
 require __DIR__.'/auth.php';

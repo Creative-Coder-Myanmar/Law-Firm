@@ -12,10 +12,10 @@
             <i class="absolute top-5 right-5 fa fa-xmark text-3xl flex md:hidden" onclick="closeMenu()"></i>
 
             <li onclick="closeMenu()">
-                <a href="#top">Home</a>
+                <a href="{{ route('index') }}">Home</a>
             </li>
             <li onclick="closeMenu()">
-                <a href="#service">Service</a>
+                <a href="{{ route('about.index') }}">About</a>
             </li>
             <li onclick="closeMenu()">
                 <a href="{{ route('user.members.index') }}">Team Members</a>
