@@ -52,12 +52,18 @@ class NewsController extends Controller
     }
 
     function update(News $new, NewsRequest $request){
+        $imageName = null;
+        if ($file = request('image')) {
+            $imageName = $this->uploader->upload($file, 'news');
+        }else{
+            $imageName = $new->image;
+        }
         $new->update([
-            // 'image' => $fileName,
+            'image' => $imageName,
             'title' => $request->title,
             'slug' => str_replace(' ', '-', strtolower($request->title)),
             'description'=> $request->description,
         ]);
-        return back();
+        return redirect()->route('news.index');
     }
 }

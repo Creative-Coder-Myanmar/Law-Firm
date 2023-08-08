@@ -16,7 +16,7 @@ AOS.init({
 
 var lastScrollTop = 0;
 
-const navbar = document.getElementById("nav");
+const navbar = document.getElementById("navbar");
 const topArrow = document.getElementById("top-arrow");
 
 window.addEventListener("scroll", function () {

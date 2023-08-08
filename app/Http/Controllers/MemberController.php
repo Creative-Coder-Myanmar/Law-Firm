@@ -10,4 +10,8 @@ class MemberController extends Controller
     function index(){
         return view('admin.members.index');
     }
+
+    function create(){
+        return view('admin.members.create');
+    }
 }

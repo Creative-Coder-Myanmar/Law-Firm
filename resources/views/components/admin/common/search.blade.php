@@ -1,3 +1,5 @@
+@props(['type'])
+
 <form class="flex items-center">
     <label class="sr-only">Search</label>
     <div class="relative w-full">
@@ -6,7 +8,7 @@
         </div>
         <input type="text"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
-            name="search" value="{{ request('search') }}" placeholder="Search news...">
+            name="search" value="{{ request('search') }}" placeholder="Search {{ $type }}...">
     </div>
     <x-admin.common.button content="Search" class="ml-2" />
 </form>

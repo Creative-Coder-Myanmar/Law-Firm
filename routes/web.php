@@ -2,20 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\ProfileController;
-
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('/blogs', function () {
-    return view('blogs');
-});
-
-Route::get('/contact', function () {
-    return view('contact');
-});
+use App\Http\Controllers\User\BlogController;
+use App\Http\Controllers\User\ContactController;
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
@@ -44,6 +35,20 @@ Route::middleware('auth')->group(function () {
         Route::get('/members/edit/{new}', 'edit')->name('members.edit');
         Route::post('/members/update/{new}', 'update')->name('members.update');
     });
+});
+
+// User
+Route::controller(IndexController::class)->group(function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/contact', 'index')->name('contact.index');
+});
+
+Route::controller(BlogController::class)->group(function () {
+    Route::get('/blogs', 'index')->name('blogs.index');
+});
+
+Route::controller(ContactController::class)->group(function () {
+    Route::get('/contact', 'index')->name('contact.index');
 });
 
 require __DIR__.'/auth.php';

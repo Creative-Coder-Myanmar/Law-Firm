@@ -39,7 +39,7 @@
                 </td>
             </tr>
         @empty
-            <p>There is no data</p>
+            <h1>No data</h1>
         @endforelse
     </tbody>
 </table>

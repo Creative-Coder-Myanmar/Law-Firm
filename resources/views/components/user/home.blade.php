@@ -13,8 +13,9 @@
                 </p>
 
                 <div class="space-x-3 flex justify-center lg:justify-start">
-                    <x-user.common.button class="bg-warning text-light" />
-                    <x-user.common.button class="bg-light text-dark" content="Contact Us" />
+                    <x-user.common.button class="bg-warning text-light" route="#service" />
+                    <x-user.common.button class="bg-light text-dark" content="Contact Us"
+                        route="{{ route('contact.index') }}" />
                 </div>
             </div>
         </div>
