@@ -16,12 +16,12 @@
             </li>
             <li onclick="closeMenu()">
                 <a href="#service">Service</a>
-            </li onclick="closeMenu()">
-            <li>
-                <a href="#members">Team Members</a>
             </li>
             <li onclick="closeMenu()">
-                <a href="#contact">Contact</a>
+                <a href="{{ route('user.members.index') }}">Team Members</a>
+            </li>
+            <li onclick="closeMenu()">
+                <a href="{{ route('contact.index') }}">Contact</a>
             </li>
         </ul>
 

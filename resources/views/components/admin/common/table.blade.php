@@ -1,4 +1,4 @@
-@props(['news', 'titles' => ['Image', 'Title', 'Content', 'Date', 'Action']])
+@props(['news', 'titles' => ['Image', 'Title', 'Date', 'Action']])
 
 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -18,9 +18,6 @@
                 </td>
                 <td class="py-4">
                     {{ $new->title }}
-                </td>
-                <td class="py-4">
-                    {!! $new->description !!}
                 </td>
                 <td class="py-4">
                     {{ $new->created_at->diffForHumans() }}

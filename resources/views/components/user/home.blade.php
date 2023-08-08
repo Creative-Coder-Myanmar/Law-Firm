@@ -1,7 +1,7 @@
 <x-user.common.section class="bg-secondary py-28">
     <div class="mx-auto flex flex-col lg:flex-row">
         <!-- Left -->
-        <div class="w-full lg:w-1/2 flex items-end p-3" data-aos="fade-right">
+        <div class="w-full lg:w-1/2 flex items-center p-3" data-aos="fade-right">
             <div class="space-y-6 text-center lg:text-start">
                 <span class="text-4xl font-semibold max-w-lg text-slate-100">
                     A Digital Agency Of Inteligents & Creative People

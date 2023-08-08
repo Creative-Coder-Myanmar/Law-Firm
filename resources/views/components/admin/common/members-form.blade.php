@@ -11,6 +11,9 @@
         @csrf
         <x-admin.common.form-input title="Profile" name="profile" type="file" />
 
+        <x-admin.common.form-input title="Name" name="name" type="text"
+            value="{{ $type === 'create' ? '' : $data->name }}" />
+
         <x-admin.common.form-input title="Position" name="position" type="text"
             value="{{ $type === 'create' ? '' : $data->position }}" />
 

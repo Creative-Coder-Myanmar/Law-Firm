@@ -40,11 +40,12 @@ Route::middleware('auth')->group(function () {
 // User
 Route::controller(IndexController::class)->group(function () {
     Route::get('/', 'index')->name('index');
-    Route::get('/contact', 'index')->name('contact.index');
+    Route::get('/members', 'members')->name('user.members.index');
 });
 
 Route::controller(BlogController::class)->group(function () {
     Route::get('/blogs', 'index')->name('blogs.index');
+    Route::get('/blogs/show/{new:slug}', 'show')->name('blogs.show');
 });
 
 Route::controller(ContactController::class)->group(function () {

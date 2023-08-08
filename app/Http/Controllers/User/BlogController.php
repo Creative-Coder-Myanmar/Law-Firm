@@ -16,4 +16,8 @@ class BlogController extends Controller
         $news = $query->paginate(9)->withQueryString();
         return view('blogs',compact('news'));
     }
+
+    function show(News $new){
+        return view('show',compact('new'));
+    }
 }
