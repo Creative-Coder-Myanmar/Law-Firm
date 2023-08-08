@@ -45,11 +45,12 @@
         <div
             class="m-auto shadow-md dark:bg-dcard dark:shadow-none rounded-lg p-4 py-10 md:p-8 md:pt-10 h-auto md:h-[550px] w-full md:w-3/5">
             <x-user.common.contact-title />
-            <form class="space-y-5">
+            <form class="space-y-5" action="/send-contact-us-mail" method="POST">
+                @csrf
                 <x-user.common.input type="text" name="name" placeholder="Enter your name" />
                 <x-user.common.input type="email" name="email" placeholder="Enter your email" />
                 <x-user.common.input type="number" name="phone" placeholder="Enter your phone" />
-                <textarea name="" cols="30" rows="7"
+                <textarea name="message" cols="30" rows="7"
                     class="shadow-sm bg-light text-gray-900 text-sm rounded-md focus:ring-primary focus:border-primary outline-0 border-1 block w-full p-2.5"
                     placeholder="name@flowbite.com"></textarea>
                 <button class="shadow-sm bg-primary text-light text-sm rounded-md block w-full py-3">Send
