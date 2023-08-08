@@ -8,9 +8,7 @@
             @endforeach
         </div>
         @if ($news->total() === 0)
-            <div class="w-full text-center">
-                <span class="text-danger text-xl">No Results Found.</span>
-            </div>
+            <x-admin.common.not-found />
         @endif
         <div class="flex justify-center bg-light">
             {{ $news->links() }}

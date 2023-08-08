@@ -55,6 +55,10 @@
                 </tbody>
             </table>
 
+            @if ($members->total() === 0)
+                <x-admin.common.not-found />
+            @endif
+
             <div class="mt-3">
                 {{ $members->links() }}
             </div>

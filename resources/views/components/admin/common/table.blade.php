@@ -11,7 +11,7 @@
         </tr>
     </thead>
     <tbody>
-        @forelse ($news as $new)
+        @foreach ($news as $new)
             <tr class="bg-white border-b hover:bg-gray-50">
                 <td class="py-4">
                     <img class="w-32 h-20 object-cover rounded-md" src="{{ $new->image }}">
@@ -35,11 +35,13 @@
                     </div>
                 </td>
             </tr>
-        @empty
-            <h1>No data</h1>
-        @endforelse
+        @endforeach
     </tbody>
 </table>
+
+@if ($news->total() === 0)
+    <x-admin.common.not-found />
+@endif
 
 <div class="mt-3">
     {{ $news->links() }}

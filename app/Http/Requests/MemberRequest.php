@@ -22,7 +22,7 @@ class MemberRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'profile'=> 'required|mimes:png,jpg,jpeg,wepb',
+            'profile'=> 'mimes:png,jpg,jpeg,wepb',
             'name' => 'required|max:70',
             'position' => 'required|max:70',
             'about' => 'min:5'

@@ -7,8 +7,6 @@ use App\Http\Controllers\MemberController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\User\BlogController;
 use App\Http\Controllers\User\ContactController;
-use App\Mail\ContactUsMail;
-use Illuminate\Support\Facades\Mail;
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
@@ -52,16 +50,7 @@ Route::controller(BlogController::class)->group(function () {
 
 Route::controller(ContactController::class)->group(function () {
     Route::get('/contact', 'index')->name('contact.index');
-});
-
-Route::post('/send-contact-us-mail', function() {
-   Mail::to('ak@demo.com')->queue(new ContactUsMail(
-    request()->name,
-    request()->email,
-    request()->phone,
-    request()->message
-   ));
-   return back();
+    Route::get('/send-contact-us-mail', 'send')->name('send.email');
 });
 
 require __DIR__.'/auth.php';
