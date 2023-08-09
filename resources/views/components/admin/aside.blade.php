@@ -19,7 +19,7 @@
                 ],
             ]" />
 
-            <x-admin.common.aside-dropdown id="people" title="People Management" :dropdownItems="[
+            <x-admin.common.aside-dropdown id="members" title="People Management" :dropdownItems="[
                 [
                     'route' => route('members.create'),
                     'name' => 'Add Pepole',
