@@ -46,7 +46,7 @@
                 'content' => 'Our Legal Consultancy for Intellectual Property (IP) Rights offers comprehensive and expert guidance to safeguard and maximize the value of your creative and innovative assets. Intellectual Property encompasses a wide range of intangible assets, including patents, trademarks, copyrights, and trade secrets. ',
             ],
             [
-                'image' => '/images/law.png',
+                'image' => '/images/lawyer.png',
                 'title' => 'Civil and criminal litigation on IP related cases',
                 'duration' => 4500,
                 'content' => 'Civil litigation in IP related cases involves legal disputes between individuals or entities over intellectual property rights. These disputes are typically resolved through the court system, where the plaintiff (the party claiming a violation of their IP rights) sues the defendant (the alleged infringing party) for damages or injunctive relief.',
