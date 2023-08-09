@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
 use App\Mail\ContactUsMail;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
+use App\Http\Requests\ContactRequest;
 
 class ContactController extends Controller
 {
@@ -12,7 +13,7 @@ class ContactController extends Controller
         return view('contact');
     }
 
-    public function send(){
+    public function send(ContactRequest $request){
         Mail::to('ak@demo.com')->queue(new ContactUsMail(
             request()->name,
             request()->email,
