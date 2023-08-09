@@ -21,10 +21,21 @@ class NewsRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            'image'=> 'mimes:png,jpg,jpeg,wepb',
-            'title' => 'required|max:100',
+        $rules = [
+            'image'=> 'mimes:png,jpg,jpeg',
+            'title' => 'required|max:1000|unique:news,title,' . request()->id,
             'description' => 'required|min:10'
         ];
+
+        if ($this->isStore()) {
+            $rules['image'] = 'required|mimes:png,jpg,jpeg';
+        }
+
+        return $rules;
+    }
+
+    protected function isStore(): bool
+    {
+        return $this->route()->action['as'] === 'news.store';
     }
 }

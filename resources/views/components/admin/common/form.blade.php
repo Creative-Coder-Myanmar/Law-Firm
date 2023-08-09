@@ -9,6 +9,8 @@
     <form class="space-y-4" action="{{ $type === 'create' ? route('news.store') : route('news.update', $data->id) }}"
         method="post" enctype="multipart/form-data">
         @csrf
+        <input type="hidden" name="id" value="{{ $type === 'create' ? old('id') : $data->id }}">
+
         <x-admin.common.form-input title="Image" name="image" type="file" />
 
         <x-admin.common.form-input title="Title" name="title" type="text"

@@ -21,11 +21,22 @@ class MemberRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            'profile'=> 'mimes:png,jpg,jpeg,wepb',
+        $rules = [
+            'profile'=> 'mimes:png,jpg,jpeg',
             'name' => 'required|max:70',
             'position' => 'required|max:70',
             'about' => 'min:5'
         ];
+
+        if ($this->isStore()) {
+            $rules['profile'] = 'required|mimes:png,jpg,jpeg';
+        }
+
+        return $rules;
+    }
+
+    protected function isStore(): bool
+    {
+        return $this->route()->action['as'] === 'members.store';
     }
 }
