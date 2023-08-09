@@ -1,6 +1,6 @@
 <x-user.master>
     <div class="blog-container">
-        <div class="flex justify-between items-start">
+        <div class="flex justify-between items-start mb-5">
             <h1 class=" text-dark font-semibold text-2xl w-3/4">
                 {{ $new->title }}
             </h1>

@@ -15,7 +15,7 @@
                 </button>
                 <a href="/" class="flex ml-2 md:mr-24">
                     {{-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="FlowBite Logo" /> --}}
-                    <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">Law
+                    <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap">Law
                         Firm</span>
                 </a>
             </div>
@@ -31,10 +31,10 @@
                     <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow"
                         id="dropdown-user">
                         <div class="px-4 py-3" role="none">
-                            <p class="text-md text-gray-900 dark:text-white" role="none">
+                            <p class="text-lg font-medium text-gray-900 mb-2">
                                 {{ auth()->user()->name }}
                             </p>
-                            <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
+                            <p class="text-sm text-gray-900 truncate">
                                 {{ auth()->user()->email }}
                             </p>
                         </div>
