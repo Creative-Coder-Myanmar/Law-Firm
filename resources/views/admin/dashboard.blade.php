@@ -25,7 +25,7 @@
                 <a href="{{ route('news.index') }}"
                     class="bg-light w-1/2 h-40 p-5 flex rounded-md shadow-md cursor-pointer">
                     <div class="w-full">
-                        <h1 class="text-3xl text-secondary font-semibold">356</h1>
+                        <h1 class="text-3xl text-secondary font-semibold">{{ count($news) }}</h1>
                         <p class="text-lg text-smoke">Total News</p>
                     </div>
                     <span
@@ -50,7 +50,7 @@
                 <a href="{{ route('members.index') }}"
                     class="bg-light w-1/2 h-40 p-5 flex rounded-md shadow-md cursor-pointer">
                     <div class="w-full">
-                        <h1 class="text-3xl text-warning font-semibold">356</h1>
+                        <h1 class="text-3xl text-warning font-semibold">{{ count($members) }}</h1>
                         <p class="text-lg text-smoke">Total People</p>
                     </div>
                     <span

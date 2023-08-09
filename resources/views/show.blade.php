@@ -6,7 +6,7 @@
             </h1>
             <p>{{ $new->created_at->diffForHumans() }}</p>
         </div>
-        <img src="{{ $new->image }}" class="rounded-md w-1/3 mx-auto h-[200px] object-cover mb-5">
+        <img src="{{ $new->image }}" class="rounded-md mx-auto h-[200px] object-cover mb-5">
         <p class="text-smoke text-lg">{!! $new->description !!}</p>
     </x-user.common.section>
 </x-user.master>

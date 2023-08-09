@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\News;
+use App\Models\Member;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\IndexController;
@@ -9,7 +11,9 @@ use App\Http\Controllers\User\BlogController;
 use App\Http\Controllers\User\ContactController;
 
 Route::get('/dashboard', function () {
-    return view('admin.dashboard');
+    $news = News::all();
+    $members = Member::all();
+    return view('admin.dashboard',compact('news','members'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 // Admin
