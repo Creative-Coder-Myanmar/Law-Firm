@@ -1,5 +1,5 @@
 <section class="py-10 px-8 lg:px-24 bg-light" id="contact">
-    <x-user.common.section-title title="CONTACT US" content="Contact For Any Query" />
+    <x-user.common.section-title title="CONTACT US" content="Contact For Any Assist" />
 
     <div class="flex flex-col md:flex-row mt-8 space-x-0 md:space-x-5 space-y-5 md:space-y-0">
         <div class="m-auto shadow-md rounded-lg p-8 md:pt-10 h-auto md:h-[550px] w-full md:w-2/5">
@@ -47,9 +47,9 @@
             <x-user.common.contact-title />
             <form class="space-y-5" action="/send-contact-us-mail" method="POST">
                 @csrf
-                <x-user.common.input type="text" name="name" placeholder="Enter your name" />
-                <x-user.common.input type="email" name="email" placeholder="Enter your email" />
-                <x-user.common.input type="number" name="phone" placeholder="Enter your phone" />
+                <x-user.common.input type="text" name="name" placeholder="Your name" />
+                <x-user.common.input type="email" name="email" placeholder="Your email" />
+                <x-user.common.input type="number" name="phone" placeholder="Your phone" />
                 <textarea name="message" cols="30" rows="7"
                     class="shadow-sm bg-light text-gray-900 text-sm rounded-md focus:ring-primary focus:border-primary outline-0 border-1 block w-full p-2.5"
                     placeholder="Write a message"></textarea>

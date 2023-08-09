@@ -1,5 +1,6 @@
 @props(['type', 'data'])
 
+<link rel="stylesheet" href="/css/ckeditor/style.css">
 <x-admin.common.form-wallpaper>
     <h1 class="block w-full text-center text-gray-800 text-2xl font-bold mb-6">
         {{ $type === 'create' ? 'Create People' : 'Edit People' }}
