@@ -43,6 +43,9 @@ class MemberController extends Controller
     }
 
     function destroy(Member $member){
+        if ($member->profile) {
+            $this->uploader->remove($member->profile);
+        }
         $member->delete();
         return back();
     }
@@ -54,9 +57,12 @@ class MemberController extends Controller
     function update(Member $member, MemberRequest $request){
         $imageName = null;
         if ($file = request('profile')) {
+            if ($member->profile) {
+                $this->uploader->remove($member->profile);
+            }
             $imageName = $this->uploader->upload($file, 'profile');
         }else{
-            $imageName = $member->image;
+            $imageName = $member->profile;
         }
         $member->update([
             'profile' => $imageName,

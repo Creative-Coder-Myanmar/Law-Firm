@@ -43,6 +43,9 @@ class NewsController extends Controller
     }
 
     function destroy(News $new){
+        if ($new->image) {
+            $this->uploader->remove($new->image);
+        }
         $new->delete();
         return back();
     }
@@ -54,6 +57,9 @@ class NewsController extends Controller
     function update(News $new, NewsRequest $request){
         $imageName = null;
         if ($file = request('image')) {
+            if ($new->image) {
+                $this->uploader->remove($new->image);
+            }
             $imageName = $this->uploader->upload($file, 'news');
         }else{
             $imageName = $new->image;
