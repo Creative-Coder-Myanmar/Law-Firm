@@ -41,7 +41,7 @@
         }
     </style>
 
-    <swiper-container class="mySwiper" space-between="2" slides-per-view="6">
+    <swiper-container class="mySwiper" space-between="2" slides-per-view="4">
         <swiper-slide><svg height="100" viewBox=".976 1 299.993 202.733" width="100"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
