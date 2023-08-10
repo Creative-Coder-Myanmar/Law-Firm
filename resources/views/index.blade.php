@@ -6,5 +6,6 @@
         <x-user.common.button class="bg-warning text-light" route="{{ route('blogs.index') }}" content="See More" />
     </div>
     <x-user.members :members="$members" />
+    <x-user.brands />
     <x-user.contact />
 </x-user.master>
