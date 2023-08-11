@@ -5,5 +5,5 @@
     <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
         {{ $member->name }}
     </h3>
-    <p>{{ $member->position }}</p>
+    <p class="text-lg">{{ $member->position }}</p>
 </div>

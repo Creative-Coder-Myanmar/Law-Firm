@@ -8,7 +8,7 @@
                 <h5 class="text-gray-900 font-bold text-2xl tracking-tight mb-2">{{ $new->title }}</h5>
             </div>
             <div class="line-clamp-3">
-                <p class="font-normal text-gray-700 mb-3">{!! $new->description !!}</p>
+                <p class="font-normal text-gray-700 text-lg mb-3">{!! $new->description !!}</p>
             </div>
         </div>
     </a>

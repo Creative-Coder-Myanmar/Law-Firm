@@ -7,7 +7,7 @@
                     Brief Profile of HTIP Law Firm Company Limited
                 </span>
 
-                <p class="text-slate-300">
+                <p class="text-slate-300 text-lg">
                     The former name “MYANMAR TRADEMARK AND PATENT LAW FIRM (MTP) ” was founded on October 18, 1995 as
                     the Partnership Law Firm and officially registered in Myanmar at the Ministry of Commerce under the
                     Registration no. 55/96 dated 19-8-1996. It was founded by two lawyers at the time when there were
