@@ -13,7 +13,7 @@ use App\Http\Controllers\User\ContactController;
 Route::get('/dashboard', function () {
     $news = News::all();
     $members = Member::all();
-    return view('admin.dashboard',compact('news','members'));
+    return view('admin.dashboard', compact('news', 'members'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 // Admin
@@ -57,4 +57,4 @@ Route::controller(ContactController::class)->group(function () {
     Route::get('/contact', 'index')->name('contact.index');
     Route::post('/send-contact-us-mail', 'send')->name('send.email');
 });
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

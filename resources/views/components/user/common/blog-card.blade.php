@@ -4,7 +4,7 @@
             <img class="rounded-t-lg transition duration-300 ease-in-out hover:scale-110" src="{{ $new->image }}">
         </div>
         <div class="p-5">
-            <div class="line-clamp-2">
+            <div class="line-clamp-2 mb-8">
                 <h5 class="text-gray-900 font-bold text-2xl tracking-tight mb-2">{{ $new->title }}</h5>
             </div>
             <div class="line-clamp-3">
