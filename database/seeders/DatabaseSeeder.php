@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\News;
 use App\Models\User;
+use App\Models\Member;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -21,10 +23,16 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
+        News::truncate();
+        Member::truncate();
+
         User::create([
             'name' => 'Test User',
             'email' => 'test@gmail.com',
             'password' => Hash::make('12345678')
         ]);
+
+        News::factory(20)->create();
+        Member::factory(20)->create();
     }
 }
