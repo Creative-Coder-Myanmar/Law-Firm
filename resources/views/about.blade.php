@@ -1,3 +1,3 @@
 <x-user.master>
-    <x-user.ABOUT />
+    <x-user.about />
 </x-user.master>
