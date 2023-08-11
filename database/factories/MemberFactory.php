@@ -18,7 +18,7 @@ class MemberFactory extends Factory
     {
         return [
             'profile' => 'https://media.licdn.com/dms/image/D4D12AQGDtWEy4e0cVA/article-inline_image-shrink_1000_1488/0/1657811912984?e=1692230400&v=beta&t=J1F1w3rSQFglDGthKXytkhG3W7KQoi2s-S30jmWjh_Y',
-            'name' => $this->faker->sentence(),
+            'name' => $this->faker->name(),
             'position' => $this->faker->sentence(),
             'about' => $this->faker->paragraph()
         ];
