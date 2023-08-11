@@ -1,6 +1,6 @@
 @props(['member'])
 
-@if(request()->is('members'))
+@if(!request()->is('members'))
 <a href="{{ route('user.members.index') }}" class="text-center cursor-pointer shadow-md hover:shadow-lg transition-all duration-500  px-3 py-11">
     <img class="mx-auto mb-4 w-32 h-32 object-cover rounded-full" src="{{ $member->profile }}">
     <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 mt-5 dark:text-white">
