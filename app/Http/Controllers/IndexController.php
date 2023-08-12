@@ -9,18 +9,26 @@ use App\Http\Controllers\Controller;
 
 class IndexController extends Controller
 {
-    function index(){
+    function index()
+    {
         $news = News::latest()->paginate(3);
         $members = Member::latest()->paginate(4);
-        return view('index',compact('news','members'));
+        return view('index', compact('news', 'members'));
     }
 
-    function members(){
+    function show(Member $member)
+    {
+        return view('show-member', compact('member'));
+    }
+
+    function members()
+    {
         $members = Member::latest()->paginate(20);
-        return view('members',compact('members'));
+        return view('members', compact('members'));
     }
 
-    function about(){
+    function about()
+    {
         return view('about');
     }
 }

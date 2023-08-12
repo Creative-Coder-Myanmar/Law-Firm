@@ -17,7 +17,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 // Admin
-Route::middleware('auth')->group(function () {
+Route::middleware('auth')->prefix('admin')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
@@ -45,12 +45,13 @@ Route::middleware('auth')->group(function () {
 Route::controller(IndexController::class)->group(function () {
     Route::get('/', 'index')->name('index');
     Route::get('/members', 'members')->name('user.members.index');
+    Route::get('/members/{member:name}', 'show')->name('user.members.show');
     Route::get('/about', 'about')->name('about.index');
 });
 
 Route::controller(BlogController::class)->group(function () {
-    Route::get('/blogs', 'index')->name('blogs.index');
-    Route::get('/blogs/show/{new:slug}', 'show')->name('blogs.show');
+    Route::get('/news', 'index')->name('news.index');
+    Route::get('/news/show/{new:slug}', 'show')->name('news.show');
 });
 
 Route::controller(ContactController::class)->group(function () {

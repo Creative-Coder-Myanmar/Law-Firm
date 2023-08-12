@@ -4,7 +4,7 @@
     @if(count($news) > 0)
         <x-user.blogs :news="$news" />
         <div class="flex justify-center bg-light">
-        <x-user.common.button class="bg-warning text-light" route="{{ route('blogs.index') }}" content="See More" />
+        <x-user.common.button class="bg-warning text-light" route="{{ route('news.index') }}" content="See More" />
     </div>
     @endif
     @if(count($members) > 0)

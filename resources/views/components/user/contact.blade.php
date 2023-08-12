@@ -1,10 +1,9 @@
 <section class="py-10 px-8 lg:px-24 bg-light" id="contact">
     <x-user.common.section-title title="CONTACT US" content="Contact For Any Assist" />
 
-    <div class="flex flex-col md:flex-row mt-8 space-x-0 md:space-x-5 space-y-5 md:space-y-0">
-        <div class="m-auto shadow-md rounded-lg p-8 md:pt-10 h-auto md:h-[550px] w-full md:w-2/5">
-            {{-- <x-user.common.contact-title/> --}}
-
+    <div class="flex flex-col md:flex-row items-center mt-8 space-x-0 md:space-x-5 space-y-5 md:space-y-0">
+        <div class="m-auto shadow-md rounded-lg p-8 md:pt-10 h-auto w-full md:w-2/5">
+            <h1 class="text-2xl font-semibold mb-5 border-b-4 border-primary pb-2 inline-block">Our Address</h1>
             <div class="space-y-5 text-dark">
                 <a href="tel:+95942377834" class="flex items-center justify-start space-x-3 hover:text-blue-400">
                     <i class="fa-solid fa-phone text-dark"></i>
@@ -43,7 +42,7 @@
 
         <!-- Form -->
         <div
-            class="m-auto shadow-md dark:bg-dcard dark:shadow-none rounded-lg p-4 py-10 md:p-8 md:pt-10 h-auto md:h-[550px] w-full md:w-3/5">
+            class="m-auto shadow-md dark:bg-dcard dark:shadow-none rounded-lg p-8 h-auto w-full md:w-3/5">
             <x-user.common.contact-title />
             <form class="space-y-5" action="/send-contact-us-mail" method="POST">
                 @csrf
@@ -53,7 +52,7 @@
                 <textarea name="message" cols="30" rows="7"
                     class="shadow-sm bg-light text-gray-900 text-sm rounded-md focus:ring-primary focus:border-primary outline-0 border-1 block w-full p-2.5"
                     placeholder="Write a message"></textarea>
-                <button class="shadow-sm bg-primary text-light text-sm rounded-md block w-full py-3">Send
+                <button class="shadow-sm bg-primary text-light text-lg rounded-md block w-full py-3">Send
                     Message</button>
             </form>
         </div>
