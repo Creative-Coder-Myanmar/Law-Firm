@@ -10,7 +10,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\User\BlogController;
 use App\Http\Controllers\User\ContactController;
 
-Route::get('/dashboard', function () {
+Route::get('/admin/dashboard', function () {
     $news = News::all();
     $members = Member::all();
     return view('admin.dashboard', compact('news', 'members'));
@@ -25,7 +25,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::controller(NewsController::class)->group(function () {
         Route::get('/news/create', 'create')->name('news.create');
         Route::post('/news/store', 'store')->name('news.store');
-        Route::get('/news/index', 'index')->name('news.index');
+        Route::get('/news', 'index')->name('admin.news.index');
         Route::get('/news/destroy/{new}', 'destroy')->name('news.destroy');
         Route::get('/news/edit/{new}', 'edit')->name('news.edit');
         Route::post('/news/update/{new}', 'update')->name('news.update');
@@ -34,7 +34,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::controller(MemberController::class)->group(function () {
         Route::get('/members/create', 'create')->name('members.create');
         Route::post('/members/store', 'store')->name('members.store');
-        Route::get('/members/index', 'index')->name('members.index');
+        Route::get('/members', 'index')->name('members.index');
         Route::get('/members/destroy/{member}', 'destroy')->name('members.destroy');
         Route::get('/members/edit/{member}', 'edit')->name('members.edit');
         Route::post('/members/update/{member}', 'update')->name('members.update');

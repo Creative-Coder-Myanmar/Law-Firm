@@ -29,6 +29,8 @@ class IndexController extends Controller
 
     function about()
     {
-        return view('about');
+        return view('about', [
+            'members' => Member::where('position', 'like', '%partner%')->get(),
+        ]);
     }
 }

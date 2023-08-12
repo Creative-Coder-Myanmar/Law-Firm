@@ -22,7 +22,7 @@
             <h3 class="text-3xl mb-6">Dashboard</h3>
 
             <div class="flex space-x-4">
-                <a href="{{ route('news.index') }}"
+                <a href="{{ route('admin.news.index') }}"
                     class="bg-light w-1/2 h-40 p-5 flex rounded-md shadow-md cursor-pointer">
                     <div class="w-full">
                         <h1 class="text-3xl text-secondary font-semibold">{{ count($news) }}</h1>

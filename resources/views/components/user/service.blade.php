@@ -54,7 +54,7 @@
         ];
     @endphp
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mx-auto">
+    <div class="grid -2 lg:grid-colsgrid-cols-1 md:grid-cols-4 gap-10 mx-auto">
         @foreach ($services as $service)
             <x-user.common.service-card :service="$service" />
         @endforeach

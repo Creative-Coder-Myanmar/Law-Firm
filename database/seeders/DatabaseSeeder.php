@@ -33,6 +33,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         News::factory(20)->create();
-        Member::factory(20)->create();
+        $this->call([
+            MemberSeeder::class,
+        ]);
     }
 }

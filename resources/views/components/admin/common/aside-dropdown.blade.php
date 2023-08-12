@@ -18,7 +18,7 @@
         $parsedUrl = parse_url($currentUrl);
         $path = $parsedUrl['path'];
         $pathSegments = explode('/', $path);
-        $output = $pathSegments[1];
+        $output = $pathSegments[2];
     @endphp
 
     <ul id="{{ $id }}" class="{{ $output === $id ? '' : 'hidden' }} py-2 space-y-2">

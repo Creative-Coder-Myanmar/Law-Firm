@@ -39,8 +39,8 @@ if (scrollTop > lastScrollTop && scrollTop > 400) {
     "top-0",
     "animate__fadeInDown"
     );
-    topArrow.classList.add("bottom-[-50%]", 'opacity-0');
     topArrow.classList.remove("bottom-6", 'opacity-[1]');
+    topArrow.classList.add("bottom-[-50%]", 'opacity-0');
 }
 
 lastScrollTop = scrollTop;

@@ -1,7 +1,7 @@
 @props(['members'])
 
 <x-user.master>
-    <x-user.common.section class="bg-light py-14">
+    <x-user.common.section class="bg-light py-14 min-h-[100vh]">
         <x-user.common.section-title title="OUR TEAM" content="Our Team Members" />
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mx-auto mt-20 mb-4">
             @foreach ($members as $member)

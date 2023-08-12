@@ -14,7 +14,7 @@
                     'name' => 'Create News',
                 ],
                 [
-                    'route' => route('news.index'),
+                    'route' => route('admin.news.index'),
                     'name' => 'News List',
                 ], 
             ]" 
@@ -25,7 +25,7 @@
                     '
             />
 
-            <x-admin.common.aside-dropdown id="members" title="Members Management" :dropdownItems="[
+            <x-admin.common.aside-dropdown id="members" title="People Management" :dropdownItems="[
                 [
                     'route' => route('members.create'),
                     'name' => 'Add Pepole',

@@ -12,9 +12,9 @@
         </div>
       </div>
       {{-- about --}}
-          <div class="mt-8 ml-8">
+          <div class="mt-8">
             <h1 class="text-3xl font-bold mb-4">About</h1>
-            <p>
+            <p class="leading-[2] text-lg">
               {{ $member->about }}
             </p>
           </div>
