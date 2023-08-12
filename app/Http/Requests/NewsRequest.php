@@ -22,9 +22,10 @@ class NewsRequest extends FormRequest
     public function rules(): array
     {
         $rules = [
-            'image'=> 'mimes:png,jpg,jpeg',
-            'title' => 'required|max:1000|unique:news,title,' . request()->id,
-            'description' => 'required|min:10'
+            'image' => 'mimes:png,jpg,jpeg',
+            'title' => 'sometimes|required|max:1000',
+            'description' => 'required|min:10',
+            'authors' => 'nullable'
         ];
 
         if ($this->isStore()) {

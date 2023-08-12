@@ -14,3 +14,7 @@
         margin: revert;
     }
 }
+
+span[aria-current="page"] span {
+    @apply bg-primary text-white;
+}

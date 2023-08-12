@@ -16,6 +16,7 @@ class News extends Model
         'title',
         'slug',
         'description',
+        'authors'
     ];
 
     protected function image(): Attribute

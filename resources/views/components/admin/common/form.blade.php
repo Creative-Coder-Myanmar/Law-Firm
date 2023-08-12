@@ -16,6 +16,9 @@
         <x-admin.common.form-input title="Title" name="title" type="text"
             value="{{ $type === 'create' ? old('title') : $data->title }}" />
 
+            <x-admin.common.form-input title="Authors" name="authors" type="text"
+            value="{{ $type === 'create' ? old('authors') : $data->authors }}" />
+
         <div class="flex flex-col">
             <label class="mb-2 font-bold text-lg text-gray-900">Content</label>
             <textarea name="description" class="editor">
