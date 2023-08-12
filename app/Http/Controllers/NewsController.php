@@ -34,7 +34,7 @@ class NewsController extends Controller
             'slug' => str_replace(' ', '-', strtolower($request->title)),
             'description' => $request->description,
         ]);
-        return redirect()->route('news.index');
+        return redirect()->route('admin.news.index');
     }
 
     function index()

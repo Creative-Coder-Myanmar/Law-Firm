@@ -17,7 +17,7 @@ AOS.init({
 var lastScrollTop = 0;
 
 const navbar = document.getElementById("navbar");
-const topArrow = document.getElementById("top-arrow");
+const topArrow = document.querySelector("#top-arrow");
 
 window.addEventListener("scroll", function () {
 var scrollTop =
@@ -31,7 +31,7 @@ if (scrollTop > lastScrollTop && scrollTop > 400) {
     "animate__fadeInDown"
     );
     topArrow.classList.remove("bottom-[-50%]", 'opacity-0');
-    topArrow.classList.add("bottom-6", 'opacity-[1]');
+    topArrow.classList.add("bottom-12", 'opacity-[1]');
 } else if (scrollTop < lastScrollTop && scrollTop < 300) {
     navbar.classList.remove(
     "fixed",
@@ -39,8 +39,9 @@ if (scrollTop > lastScrollTop && scrollTop > 400) {
     "top-0",
     "animate__fadeInDown"
     );
-    topArrow.classList.remove("bottom-6", 'opacity-[1]');
+    topArrow.classList.remove("bottom-12", 'opacity-[1]');
     topArrow.classList.add("bottom-[-50%]", 'opacity-0');
+
 }
 
 lastScrollTop = scrollTop;

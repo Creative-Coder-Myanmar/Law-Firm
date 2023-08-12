@@ -18,7 +18,7 @@
                 <a href="{{ route('about.index') }}">About</a>
             </li>
             <li onclick="closeMenu()">
-                <a href="{{ route('index') }}">News</a>
+                <a href="{{ route('news.index') }}">News</a>
             </li>
             <li onclick="closeMenu()">
                 <a href="{{ route('user.members.index') }}">Team Members</a>

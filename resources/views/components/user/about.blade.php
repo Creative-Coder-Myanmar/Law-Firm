@@ -46,8 +46,8 @@
             </h1>
             <div class="grid lg:grid-cols-3 grid-cols-1 gap-4 my-11">
                 @foreach($members as $member)
-                <x-user.common.member-card :member="$member" />
-            @endforeach
+                    <x-user.common.member-card :member="$member" />
+                @endforeach
             </div>
             <p>
                 At present, our firm, which is located in the heart of the Business City Yangon, professionally operates
