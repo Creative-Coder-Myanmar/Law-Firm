@@ -2937,6 +2937,16 @@ span[aria-current="page"] span {
     padding-bottom: 7rem;
   }
 
+  .md\:px-11 {
+    padding-left: 2.75rem;
+    padding-right: 2.75rem;
+  }
+
+  .md\:px-14 {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
   .md\:pt-10 {
     padding-top: 2.5rem;
   }

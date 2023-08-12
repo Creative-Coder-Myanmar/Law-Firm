@@ -16,8 +16,8 @@
                 </p>
 
                 <div class="md:gap-3 flex md:flex-row gap-5 flex-col justify-center lg:justify-start md:pt-8 py-5">
-                    <x-user.common.button class="bg-warning text-light w-full flex justify-center py-4" route="{{ route('about.index') }}" />
-                    <x-user.common.button class="bg-light text-dark flex justify-center  w-full" content="Contact Us"
+                    <x-user.common.button class="bg-warning text-light md:w-auto md:px-14 w-full flex justify-center py-4" route="{{ route('about.index') }}" />
+                    <x-user.common.button class="bg-light text-dark flex justify-center md:w-auto md:px-11  w-full" content="Contact Us"
                         route="{{ route('contact.index') }}" />
                 </div>
             </div>
