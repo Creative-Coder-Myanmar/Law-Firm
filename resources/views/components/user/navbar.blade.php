@@ -6,7 +6,7 @@
             <a href="/" class="text-3xl font-bold text-slate-200">Law Firm</a>
         </div>
 
-        <ul class="flex flex-col md:flex-row space-x-0 md:space-x-6 space-y-6 md:space-y-0 text-lg text-slate-200 dark:text-slate-800 cursor-pointer / bg-primary fixed md:static top-0 -right-full md:right-0 w-full md:w-auto h-screen md:h-auto z-10 justify-center items-center duration-200 "
+        <ul class="flex flex-col md:flex-row space-x-0 md:space-x-11 space-y-6 md:space-y-0 text-lg text-slate-200 dark:text-slate-800 cursor-pointer / bg-primary fixed md:static top-0 -right-full md:right-0 w-full md:w-auto h-screen md:h-auto z-10 justify-center items-center duration-200 "
             id="menuItem">
 
             <i class="absolute top-5 right-5 fa fa-xmark text-3xl flex md:hidden" onclick="closeMenu()"></i>
@@ -25,6 +25,9 @@
             </li>
             <li onclick="closeMenu()">
                 <a href="{{ route('performances') }}">Our Performances</a>
+            </li>
+            <li onclick="closeMenu()">
+                <a href="{{ route('services') }}">Our Services</a>
             </li>
             <li onclick="closeMenu()">
                 <a href="{{ route('contact.index') }}">Contact</a>

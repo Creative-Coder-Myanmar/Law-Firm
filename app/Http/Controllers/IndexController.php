@@ -40,4 +40,9 @@ class IndexController extends Controller
             'members' => Member::where('position', 'like', '%partner%')->get(),
         ]);
     }
+
+    public function servicesIndex()
+    {
+        return view('our-services');
+    }
 }

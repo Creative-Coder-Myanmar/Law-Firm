@@ -48,6 +48,7 @@ Route::controller(IndexController::class)->group(function () {
     Route::get('/members/{member:name}', 'show')->name('user.members.show');
     Route::get('/about', 'about')->name('about.index');
     Route::get('/our-performances', 'performancesIndex')->name('performances');
+    Route::get('/our-services', 'servicesIndex')->name('services');
 });
 
 Route::controller(BlogController::class)->group(function () {
