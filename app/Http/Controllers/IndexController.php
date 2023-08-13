@@ -33,4 +33,11 @@ class IndexController extends Controller
             'members' => Member::where('position', 'like', '%partner%')->get(),
         ]);
     }
+
+    public function performancesIndex()
+    {
+        return view('our-performances', [
+            'members' => Member::where('position', 'like', '%partner%')->get(),
+        ]);
+    }
 }
