@@ -1,5 +1,5 @@
 <x-user.common.section class="bg-secondary md:py-28 py-20">
-    <div class="mx-auto flex flex-col lg:flex-row">
+    <div class="mx-auto flex flex-col lg:flex-row overflow-hidden">
         <!-- Left -->
         <div class="w-full lg:w-1/2 flex items-center md:p-3 p-0" data-aos="fade-right">
             <div class="space-y-6 text-center lg:text-start">

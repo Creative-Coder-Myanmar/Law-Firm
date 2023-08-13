@@ -6,10 +6,10 @@
             <a href="/" class="text-3xl font-bold text-slate-200">Law Firm</a>
         </div>
 
-        <ul class="flex flex-col md:flex-row space-x-0 md:space-x-11 space-y-6 md:space-y-0 text-lg text-slate-200 dark:text-slate-800 cursor-pointer / bg-primary fixed md:static top-0 -right-full md:right-0 w-full md:w-auto h-screen md:h-auto z-10 justify-center items-center duration-200 "
+        <ul class="flex flex-col md:flex-row gap-x-0 md:gap-11 gap-y-11 md:gap-y-0 text-lg text-slate-200 dark:text-slate-800 cursor-pointer bg-primary fixed md:static top-0 -right-full md:right-0 w-full md:w-auto h-screen md:h-auto z-10 justify-center items-center duration-200 "
             id="menuItem">
 
-            <i class="absolute top-5 right-5 fa fa-xmark text-3xl flex md:hidden" onclick="closeMenu()"></i>
+            <i class="absolute top-5 right-5 fa fa-xmark text-3xl text-white flex md:hidden" onclick="closeMenu()"></i>
 
             <li onclick="closeMenu()">
                 <a href="{{ route('index') }}">Home</a>
@@ -36,7 +36,7 @@
 
         <!-- Menuicon -->
         <div class="flex justify-center items-center md:hidden">
-            <i class="fa-solid fa-bars text-slate-200 dark:text-slate-800 text-2xl" onclick="openMenu()"></i>
+            <i class="fa-solid fa-bars text-white dark:text-slate-800 text-2xl" onclick="openMenu()"></i>
         </div>
 
     </div>

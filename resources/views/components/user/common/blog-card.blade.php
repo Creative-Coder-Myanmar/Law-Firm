@@ -1,6 +1,6 @@
 <div class="bg-white shadow-md border border-gray-200 rounded-lg cursor-pointer" data-aos="zoom-in">
     <a href="{{ route('news.show', $new->slug) }}">
-        <div class="h-[200px] overflow-hidden">
+        <div class="md:h-[200px] h-[150px] overflow-hidden">
             <img class="rounded-t-lg transition duration-300 ease-in-out hover:scale-110 object-cover" src="{{ $new->image }}">
         </div>
         <div class="md:p-5 pt-0 px-5 pb-5">
