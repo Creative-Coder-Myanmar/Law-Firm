@@ -18,3 +18,7 @@
 span[aria-current="page"] span {
     @apply bg-primary text-white;
 }
+
+/* .performances__list {
+    list-style: circle !important;
+} */

@@ -23,12 +23,12 @@
             <li onclick="closeMenu()">
                 <a href="{{ route('user.members.index') }}">Team Members</a>
             </li>
-            <li onclick="closeMenu()">
+            {{-- <li onclick="closeMenu()">
                 <a href="{{ route('performances') }}">Our Performances</a>
-            </li>
-            <li onclick="closeMenu()">
+            </li> --}}
+            {{-- <li onclick="closeMenu()">
                 <a href="{{ route('services') }}">Our Services</a>
-            </li>
+            </li> --}}
             <li onclick="closeMenu()">
                 <a href="{{ route('contact.index') }}">Contact</a>
             </li>
